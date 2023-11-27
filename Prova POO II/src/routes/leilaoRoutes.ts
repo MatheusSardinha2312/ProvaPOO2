@@ -1,9 +1,8 @@
 import express from 'express';
-import LeilaoController from '../controllers/LeilaoController';
+import leilaoController from '../controllers/LeilaoController';
 
 const router = express.Router();
 
-router.get('/leiloes', LeilaoController.listarLeiloes);
-router.get('/leiloes/:id', LeilaoController.obterLeilaoPorId);
+router.post('/criar', leilaoController.criarLeilao);
 
 export default router;

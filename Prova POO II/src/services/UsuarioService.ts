@@ -1,13 +1,9 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import usuarioModel from '../models/usuarioModel';
 
 class UsuarioService {
-  static async listarUsuarios() {
-  }
-  
-  static async obterUsuarioPorId(id: number) {
+  async criarUsuario(nome: string, email: string) {
+    return usuarioModel.criarUsuario(nome, email);
   }
 }
 
-export default UsuarioService;
+export default new UsuarioService();

@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import LeilaoService from '../services/LeilaoService';
+import leilaoService from '../services/LeilaoService';
 
-class LeilaoController {
-  static async listarLeiloes(req: Request, res: Response) {
+export default {
+  async criarLeilao(req: Request, res: Response) {
+    try {
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Erro ao criar leilão' });
+    }
   }
-
-  static async obterLeilaoPorId(req: Request, res: Response) {
-  }
-}
-
-export default LeilaoController;
+};

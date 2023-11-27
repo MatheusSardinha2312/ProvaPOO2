@@ -1,9 +1,8 @@
 import express from 'express';
-import LanceController from '../controllers/LanceController';
+import lanceController from '../controllers/LanceController';
 
 const router = express.Router();
 
-router.get('/lances', LanceController.listarLances);
-router.get('/lances/:id', LanceController.obterLancePorId);
+router.post('/criar', lanceController.criarLance);
 
 export default router;

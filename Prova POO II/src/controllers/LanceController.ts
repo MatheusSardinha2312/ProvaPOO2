@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import LanceService from '../services/LanceService';
+import lanceService from '../services/LanceService';
 
-class LanceController {
-  static async listarLances(req: Request, res: Response) {
+export default {
+  async criarLance(req: Request, res: Response) {
+    try {
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Erro ao criar lance' });
+    }
   }
-
-  static async obterLancePorId(req: Request, res: Response) {
-  }
-}
-
-export default LanceController;
+};

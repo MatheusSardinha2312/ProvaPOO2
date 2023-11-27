@@ -1,13 +1,9 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import lanceModel from '../models/lanceModel';
 
 class LanceService {
-  static async listarLances() {
-  }
-
-  static async obterLancePorId(id: number) {
+  async criarLance(compradorId: number, leilaoId: number, valor: number) {
+    return lanceModel.criarLance(compradorId, leilaoId, valor);
   }
 }
 
-export default LanceService;
+export default new LanceService();

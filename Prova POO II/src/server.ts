@@ -1,7 +1,7 @@
 import express from 'express';
 import usuarioRoutes from './routes/usuarioRoutes';
-import lanceRoutes from './routes/lanceRoutes';
 import leilaoRoutes from './routes/leilaoRoutes';
+import lanceRoutes from './routes/lanceRoutes';
 
 const app = express();
 const PORT = 3000;

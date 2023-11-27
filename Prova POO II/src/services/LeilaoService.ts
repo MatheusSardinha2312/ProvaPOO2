@@ -1,13 +1,9 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import leilaoModel from '../models/leilaoModel';
 
 class LeilaoService {
-  static async listarLeiloes() {
-  }
-
-  static async obterLeilaoPorId(id: number) {
+  async criarLeilao(produto: string, preco: number, dataLimite: Date, donoId: number) {
+    return leilaoModel.criarLeilao(produto, preco, dataLimite, donoId);
   }
 }
 
-export default LeilaoService;
+export default new LeilaoService();
